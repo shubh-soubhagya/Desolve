@@ -1,2 +1,1 @@
-# Desolve
-Desolve – Your AI Assistant for Open Source Contributions
+# Desolve – Your AI Assistant for Open Source Contributions!
