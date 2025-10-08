@@ -1,2 +1,7 @@
+.idea
 .env
+venv
+
 cloned_repo
+repo_files_data.csv
+repo_issues.csv
