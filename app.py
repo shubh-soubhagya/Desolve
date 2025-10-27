@@ -5,12 +5,7 @@ from file_contents import extract_files_to_csv
 from issues import extract_issues
 
 def run_pipeline(repo_url, clone_dir="cloned_repo"):
-    """
-    Run the full pipeline:
-    1. Clone repo
-    2. Extract files to CSV
-    3. Extract issues to CSV
-    """
+
     # Determine local repo path
     repo_name = repo_url.rstrip("/").split("/")[-1].replace(".git", "")
     repo_path = os.path.join(clone_dir, repo_name)
@@ -40,7 +35,7 @@ def main():
     if not repo_url:
         print("❌ No repository URL provided. Exiting.")
         return
-
+    
     run_pipeline(repo_url)
 
 if __name__ == "__main__":
