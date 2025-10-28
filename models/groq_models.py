@@ -182,7 +182,7 @@ import faiss
 # =====================================================
 # CONFIGURATION
 # =====================================================
-MODEL_NAME = "llama-3.3-70b-versatile"   # You can use "gemma-7b-it" or "meta-llama/llama-guard-4-12b"
+MODEL_NAME = "openai/gpt-oss-120b"   # You can use "gemma-7b-it" or "meta-llama/llama-guard-4-12b"
 FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
 ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
 INDEX_PATH = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_index.pkl"
