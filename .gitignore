@@ -3,6 +3,9 @@ __pycache__/
 .env
 venv
 
+models/all-MiniLM-L6-v2
+
 cloned_repo
 repo_files_data.csv
 repo_issues.csv
+repo_index.pkl
