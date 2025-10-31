@@ -7,8 +7,10 @@ import google.generativeai as genai
 # Configuration variables (can be edited externally)
 # =====================================================
 MODEL_NAME = "gemini-2.5-flash-lite"
-ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
-FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
+# ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+# FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
+ISSUES_CSV = "repo_issues.csv"
+FILES_CSV = "repo_files_data.csv"
 ROW_INDEX = 3  # 4th issue (0-based index)
 
 # =====================================================

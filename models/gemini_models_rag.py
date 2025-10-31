@@ -10,10 +10,14 @@ import faiss
 # CONFIGURATION
 # =====================================================
 MODEL_NAME = "gemini-2.5-flash-lite"
-FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
-ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+# FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
+# ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+# CUSTOM_MODEL_PATH = r"C:\Users\hp\Desktop\prashna\models\all-MiniLM-L6-v2"
 INDEX_PATH = "repo_index.pkl"
-CUSTOM_MODEL_PATH = r"C:\Users\hp\Desktop\prashna\models\all-MiniLM-L6-v2"   
+
+FILES_CSV = "repo_files_data.csv"
+ISSUES_CSV = "repo_issues.csv"
+CUSTOM_MODEL_PATH = "all-MiniLM-L6-v2"
 TOP_K = 30  # Number of most relevant files to retrieve per issue
 ROW_INDEX = 3  # 4th issue (0-based)
 

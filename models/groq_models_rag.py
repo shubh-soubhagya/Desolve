@@ -10,20 +10,20 @@ import faiss
 # =====================================================
 # CONFIGURATION
 # =====================================================
-# MODEL_NAME = "openai/gpt-oss-120b"   # You can use "gemma-7b-it" or "meta-llama/llama-guard-4-12b"
-# FILES_CSV = "repo_files_data.csv"
-# ISSUES_CSV = "repo_issues.csv"
-# INDEX_PATH = "repo_index.pkl"
-# CUSTOM_MODEL_PATH = "all-MiniLM-L6-v2"   # 🔹 change to your embedding model path
-# TOP_K = 15  # Number of most relevant files to retrieve per query
-
-
 MODEL_NAME = "openai/gpt-oss-120b"   # You can use "gemma-7b-it" or "meta-llama/llama-guard-4-12b"
-FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
-ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+FILES_CSV = "repo_files_data.csv"
+ISSUES_CSV = "repo_issues.csv"
 INDEX_PATH = "repo_index.pkl"
-CUSTOM_MODEL_PATH = r"C:\Users\hp\Desktop\prashna\models\all-MiniLM-L6-v2"   # 🔹 change to your embedding model path
+CUSTOM_MODEL_PATH = "all-MiniLM-L6-v2"   # 🔹 change to your embedding model path
 TOP_K = 15  # Number of most relevant files to retrieve per query
+
+
+# MODEL_NAME = "openai/gpt-oss-120b"   # You can use "gemma-7b-it" or "meta-llama/llama-guard-4-12b"
+# FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
+# ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+# INDEX_PATH = "repo_index.pkl"
+# CUSTOM_MODEL_PATH = r"C:\Users\hp\Desktop\prashna\models\all-MiniLM-L6-v2"   # 🔹 change to your embedding model path
+# TOP_K = 15  # Number of most relevant files to retrieve per query
 
 # =====================================================
 # ENVIRONMENT SETUP
