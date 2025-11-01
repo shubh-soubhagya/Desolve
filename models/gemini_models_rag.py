@@ -9,11 +9,12 @@ import faiss
 # =====================================================
 # CONFIGURATION
 # =====================================================
+
 MODEL_NAME = "gemini-2.5-flash-lite"
-FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_files_data.csv"
-ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\repo_issues.csv"
+FILES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\data\repo_files_data.csv"
+ISSUES_CSV = r"C:\Users\hp\Desktop\MinorProj\Desolve\data\repo_issues.csv"
 CUSTOM_MODEL_PATH = r"C:\Users\hp\Desktop\prashna\models\all-MiniLM-L6-v2"
-INDEX_PATH = "repo_index.pkl"
+INDEX_PATH = r"C:\Users\hp\Desktop\MinorProj\Desolve\embeddings\repo_index.pkl"
 
 # FILES_CSV = "repo_files_data.csv"
 # ISSUES_CSV = "repo_issues.csv"
@@ -152,15 +153,15 @@ def start_chat(system_prompt: str, model_name: str):
 # =====================================================
 # MAIN
 # =====================================================
-if __name__ == "__main__":
-    load_env_and_configure()
+# if __name__ == "__main__":
+#     load_env_and_configure()
 
-    if not os.path.exists(INDEX_PATH):
-        build_vector_index()
+#     if not os.path.exists(INDEX_PATH):
+#         build_vector_index()
 
-    issue = load_issue(ISSUES_CSV, row_index=ROW_INDEX)
-    repo_context = retrieve_relevant_files(issue["body"])
-    system_prompt = create_prompt(issue, repo_context)
+#     issue = load_issue(ISSUES_CSV, row_index=ROW_INDEX)
+#     repo_context = retrieve_relevant_files(issue["body"])
+#     system_prompt = create_prompt(issue, repo_context)
 
-    print(f"\n📂 Loaded Issue #{issue.get('number', 'N/A')} — “{issue.get('title', '')}”")
-    start_chat(system_prompt, MODEL_NAME)
+#     print(f"\n📂 Loaded Issue #{issue.get('number', 'N/A')} — “{issue.get('title', '')}”")
+#     start_chat(system_prompt, MODEL_NAME)

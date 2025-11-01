@@ -14,12 +14,12 @@ def run_pipeline(repo_url, clone_dir="cloned_repo"):
     clone_repo(repo_url, clone_dir)
 
     # Step 2: Extract repository files
-    files_csv = r"data\repo_files_data.csv"
+    files_csv = "repo_files_data.csv"
     print("\n📂 Extracting repository files...")
     extract_files_to_csv(repo_path, files_csv)
 
     # Step 3: Extract GitHub issues
-    issues_csv = r"data\repo_issues.csv"
+    issues_csv = "repo_issues.csv"
     print("\n🐞 Extracting repository issues...")
     token = os.getenv("GITHUB_TOKEN")
     extract_issues(repo_url, output_file=issues_csv, token=token)
