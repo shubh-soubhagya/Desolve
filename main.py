@@ -14,7 +14,6 @@ from models.gemini_models_rag import (
     create_prompt,
     retrieve_relevant_files,
     load_issue,
-    start_chat,
 )
 
 # =====================================================
@@ -52,6 +51,26 @@ def select_issue_from_csv(csv_path):
         except ValueError:
             print("⚠️ Please enter a valid number.")
 
+def start_chat(system_prompt: str, model_name: str):
+    """Starts CLI-based Gemini chat session."""
+    model = genai.GenerativeModel(model_name)
+    chat = model.start_chat(history=[{"role": "user", "parts": system_prompt}])
+
+    print("\n🤖 Desolve AI: RAG-based contextual chat initialized!\n")
+
+    while True:
+        user_input = input("👨‍💻 You: ").strip()
+        if user_input.lower() in ["exit", "quit", "q"]:
+            print("👋 Exiting chat. Goodbye!")
+            break
+
+        try:
+            response = chat.send_message(user_input)
+            print("\n🤖 Desolve AI:\n")
+            print(response.text)
+            print("\n" + "-" * 100 + "\n")
+        except Exception as e:
+            print(f"⚠️ Error: {e}")
 
 # =====================================================
 # Main pipeline
